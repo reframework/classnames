@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
+    "target": "ES5",
     "module": "ES6",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
@@ -8,6 +8,6 @@
     "skipLibCheck": true,
     "noUncheckedIndexedAccess": true,
     "noUnusedLocals": true,
-    "types": ["node", "jest"]
+    "types": ["node", "jest"],
   }
 }
