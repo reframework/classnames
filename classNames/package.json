@@ -1,6 +1,6 @@
 {
   "name": "@reframework/classnames",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Philipp Sapronov <philipp.sapronov@gmail.com>",
   "main": "dist/index.js",
   "types": "./dist/index.d.ts",
