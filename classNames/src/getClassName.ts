@@ -1,17 +1,15 @@
 export type ClassNamesStructure = Record<string, boolean>;
 
 export const getClassName = (classNames: ClassNamesStructure): string => {
-  // TODO: Check the object
-
-  if (!classNames) {
+  if (!classNames || classNames.constructor.name !== 'Object') {
     console.error(
       `getCLassName: Expected configuration object but got ${classNames}`
     );
 
-    return "";
+    return '';
   }
 
   return Object.keys(classNames)
     .filter((className) => classNames[className])
-    .join(" ");
+    .join(' ');
 };

@@ -1,14 +1,18 @@
-import { getClassName } from "./getClassName";
+import { getClassName } from './getClassName';
 
-describe("The `getClassName` method", () => {
-  it("returns empty string when argument is not an object", () => {
-    // @ts-expect-error
-    expect(getClassName(undefined)).toBe("");
-    // @ts-expect-error
-    expect(getClassName(null)).toBe("");
+describe('The `getClassName` method', () => {
+  it('returns empty string when argument is not an object', () => {
+    // @ts-expect-error check other types
+    expect(getClassName(undefined)).toBe('');
+    // @ts-expect-error check other types
+    expect(getClassName(null)).toBe('');
+    // @ts-expect-error check other types
+    expect(getClassName('1, 2, 3')).toBe('');
+    // @ts-expect-error check other types
+    expect(getClassName([1, 2, 3])).toBe('');
   });
 
-  it("returns a string with expected classes", () => {
+  it('returns a string with expected classes', () => {
     expect(
       getClassName({
         button: true,
@@ -17,6 +21,6 @@ describe("The `getClassName` method", () => {
         large: true,
         disabled: false,
       })
-    ).toBe("button open large");
+    ).toBe('button open large');
   });
 });
