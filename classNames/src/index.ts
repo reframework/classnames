@@ -1,1 +1,1 @@
-export { getClassName, ClassNamesStructure } from './getClassName';
+export { getClassName, type ClassNamesStructure } from './getClassName';
