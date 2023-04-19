@@ -1,9 +1,9 @@
 export type ClassNamesStructure = Record<string, boolean>;
 
-export const getClassName = (classNames: ClassNamesStructure): string => {
+const classnames = (classNames: ClassNamesStructure): string => {
   if (!classNames || classNames.constructor.name !== 'Object') {
     console.error(
-      `getCLassName: Expected configuration object but got ${classNames}`
+      `classnames: Expected configuration object but got ${classNames}`
     );
 
     return '';
@@ -13,3 +13,5 @@ export const getClassName = (classNames: ClassNamesStructure): string => {
     .filter((className) => classNames[className])
     .join(' ');
 };
+
+export default classnames;
